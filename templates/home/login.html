@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body  %}
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title> CSS Login Screen Tutorial </title>
+  </head>
+  <body>
+    <body>
+      <div class="login-page">
+        <form action='/handlelogin/' method='post'>
+          {% csrf_token %}
+        <div class="form">
+          <div class="login">
+            <div class="login-header">
+              <h3>LOGIN</h3>
+              <p>Please enter your credentials to login.</p>
+            </div>
+          </div>
+          <form class="login-form">
+            <input type="text" id="loginuname" name="loginuname" placeholder="username"/>
+            <input type="password" id="loginpassword1" name="loginpassword1" placeholder="password"/>
+            <button>login</button>
+            <p class="message">Not registered? <a href="/register">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+  </body>
+  </body>
+  </html>
+  {% endblock body %}
+  

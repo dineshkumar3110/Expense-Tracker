@@ -1,0 +1,70 @@
+{% extends 'base1.html' %}
+{% block body  %}
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+        <form action="/handleSignup/" method='post'>
+            {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" for="inputFirstName">First Name</span>
+            <input type="text" id="fname" name="fname" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details" for="inputLastName">Last Name</span>
+            <input type="text" id="lname" name="lname" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details" for="uname">Username</span>
+            <input type="text"  id="uname" name="uname"  placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details" for="inputEmailAddress" >Email</span>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+            <div class="input-box">
+                <span class="details" for="inputincome">Income</span>
+                <input type="text" id="income" name="income" placeholder="Enter Income" required>
+            </div>
+          <div class="input-box">
+            <span class="details" for="inputsavings">Savings</span>
+            <input type="text" id="Savings"  name="Savings" placeholder="Savings" required>
+          </div>
+          <div class="input-box">
+            <span class="details" for="inputPassword">Password</span>
+            <input type="password" id="pass1" name="pass1" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details" for="inputConfirmPassword">Confirm Password</span>
+            <input type="password" id="pass2" name="pass2" placeholder="Confirm your password" required>
+          </div><div class="input-box">
+            <div class="details">
+                <label  for="inputprofession" for="inputprofession" style="font-size:15px">Profession</label>
+                <select name="profession" id="profession" style="font-size:15px">
+                    <option value="Employee">Employee</option>
+                    <option value="Business">Business</option>
+                    <option value="Student">Student</option>
+                    <option value="Other">Other</option>
+                </select>
+             </div>
+            </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="card-footer text-center">
+            <div class="small"><a href="/">Have an account? Go to login</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock body %}
